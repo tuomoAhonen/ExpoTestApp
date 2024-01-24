@@ -14,11 +14,7 @@ export default App = () => {
 		<View style={styles.container}>
 			<StatusBar style='auto' />
 			<Text>Testi expo app</Text>
-			<TextInput
-				placeholder='input pls'
-				style={{margin: 5, paddingLeft: 5, paddingRight: 5, borderWidth: 1, borderColor: '#000000'}}
-				onChangeText={(e) => setMessage(e)}
-			/>
+			<TextInput placeholder='input pls' style={styles.textInput} onChangeText={(e) => setMessage(e)} />
 			<Button title='Press me' onPress={showAlert} />
 		</View>
 	);
@@ -30,6 +26,13 @@ const styles = StyleSheet.create({
 		backgroundColor: '#fff',
 		alignItems: 'center',
 		justifyContent: 'center',
+	},
+	textInput: {
+		margin: 5,
+		paddingLeft: 5,
+		paddingRight: 5,
+		borderWidth: 1,
+		borderColor: '#000000',
 	},
 });
 
